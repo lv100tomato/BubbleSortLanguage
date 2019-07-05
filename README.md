@@ -35,4 +35,9 @@ BrainFuckをベースにしているので、それといった文法はあり�
 サンプルコードとして、hello_world.bslとcat.bslを用意しました。プログラミングする際の参考にしてください。
 
 - hello_world.bsl : `Hello, World!`と出力します。
-- cat.bsl : 入力した文字列を出力します。出力し終わると入力フェーズに戻ります。終了する際はCtrl+C等で強制終了させてください。
+- catBF.bf.bsl : 入力した文字列を出力します。出力し終わると入力フェーズに戻ります。終了する際はCtrl+C等で強制終了させてください。(ちなみにこれは下のコンバータで生成したものです)
+
+## おまけ:チューリング完全性
+BrainF\*ckからBubbleSortLanguageに変換するコンバータを作成しました。BFtoBSL内にあるBFtoBSL.exeに引数としてBrainF\*ckのソースコードを読み込ませると、BubbleSortLanguageで実行可能なソースコードを生成します。ただし、生成するソースコードはかなり冗長なので、動作に時間がかかります。
+
+このように、BrainF\*ckで実行できるものはBubbleSortLanguageで実行できると分かったので、BubbleSortLanguageは間違いなくプログラミング言語ですね。
