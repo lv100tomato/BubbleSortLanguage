@@ -34,11 +34,19 @@ namespace BubbleSortLanguage
                 {
                     try
                     {
-                        preSource.Add(long.Parse(read));
+                        long insert = long.Parse(read);
+                        if(insert < 0)
+                        {
+                            Console.WriteLine("Error : Number should not be negative.");
+                        }
+                        else
+                        {
+                            preSource.Add(insert);
+                        }
                     }
                     catch
                     {
-                        Console.WriteLine("Error : Only accept long integer");
+                        Console.WriteLine("Error : Only accept long integer.");
                         return;
                     }
                     read = Console.ReadLine();
@@ -65,7 +73,15 @@ namespace BubbleSortLanguage
                 {
                     try
                     {
-                        preSource.Add(long.Parse(read));
+                        long insert = long.Parse(read);
+                        if (insert < 0)
+                        {
+                            
+                        }
+                        else
+                        {
+                            preSource.Add(insert);
+                        }
                     }
                     catch
                     {
@@ -197,12 +213,12 @@ namespace BubbleSortLanguage
                                 if (debug) Console.WriteLine("SourceCode Line " + (Index + Memory[PointerA]) + " : " + Source[Index + Memory[PointerA]] + " (" + (Memory[PointerB] > 0 ? "" : "+") + (-Memory[PointerB]) + ")");
                                 break;
                             case 14:
-                                PointerA += (Memory[PointerB] == 0 ? 1 : 0);
-                                if (debug) Console.WriteLine("(*PointerB) = " + Memory[PointerB] + " -> PointerA : " + (PointerA - MemSizeHalf));
+                                PointerB += (Memory[PointerA] == 0 ? 1 : 0);
+                                if (debug) Console.WriteLine("(*PointerA) = " + Memory[PointerA] + " -> PointerB : " + (PointerB - MemSizeHalf));
                                 break;
                             case 15:
-                                PointerA -= (Memory[PointerB] == 0 ? 1 : 0);
-                                if (debug) Console.WriteLine("(*PointerB) = " + Memory[PointerB] + " -> PointerA : " + (PointerA - MemSizeHalf));
+                                PointerB -= (Memory[PointerA] == 0 ? 1 : 0);
+                                if (debug) Console.WriteLine("(*PointerA) = " + Memory[PointerA] + " -> PointerB : " + (PointerB - MemSizeHalf));
                                 break;
                             default:
                                 break;
