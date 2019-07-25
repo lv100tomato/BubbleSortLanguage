@@ -184,6 +184,7 @@ namespace BubbleSortLanguage
                                     Console.Write("Output : " + debOut);
                                     debOut = debOut + ((char)Memory[PointerA]).ToString();
                                 }
+                                if (Memory[PointerA] == 0x1a) return;
                                 Console.Write((char)Memory[PointerA]);
                                 if (debug) Console.WriteLine();
                                 break;
