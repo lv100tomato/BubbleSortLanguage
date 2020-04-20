@@ -10,12 +10,13 @@ namespace BubbleSortLanguage
     class Program
     {
         public static long[] Source;
-        public static int[] Memory;
+        //public static int[] Memory;
+        public static InfinityList Memory;
         public static int PointerA;
         public static int PointerB;
         public static int Index;
 
-        public static int MemSizeHalf = 2048;
+        public static int MemSizeHalf = 0;
         public static int Mod = 50;
 
         static void Main(string[] args)
@@ -101,7 +102,8 @@ namespace BubbleSortLanguage
             }
 
             //bubblesort
-            Memory = Enumerable.Repeat(0, MemSizeHalf * 2).ToArray();
+            //Memory = Enumerable.Repeat(0, MemSizeHalf * 2).ToArray();
+            Memory = new InfinityList(0);
             PointerA = MemSizeHalf;
             PointerB = MemSizeHalf;
             Index = 0;
